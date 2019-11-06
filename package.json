@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "nodemon SRC/server.js",
-    "start":"nodemon SRC/server.js"
+    "start":"node SRC/server.js"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",

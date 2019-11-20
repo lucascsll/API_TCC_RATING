@@ -16,6 +16,7 @@ class Question extends Model {
         smoke: Sequelize.INTEGER,
         alco: Sequelize.INTEGER,
         active: Sequelize.INTEGER,
+        score: Sequelize.INTEGER,
       },
       {
         sequelize,

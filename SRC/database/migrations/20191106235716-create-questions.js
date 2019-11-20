@@ -55,6 +55,10 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false,
       },
+      score: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+      },
       created_at: {
         type: Sequelize.DATE,
         allowNull: false,

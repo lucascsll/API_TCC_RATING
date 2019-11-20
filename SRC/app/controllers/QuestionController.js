@@ -16,6 +16,7 @@ class QuestionController {
       smoke,
       alco,
       active,
+      score
     } = await Question.create({...req.body,id_usuario : req.userId});
     return res.json({
     id_usuario,
@@ -30,6 +31,7 @@ class QuestionController {
       smoke,
       alco,
       active,
+      score
     });
   }
 

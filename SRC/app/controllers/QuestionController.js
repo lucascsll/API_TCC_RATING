@@ -5,33 +5,16 @@ class QuestionController {
   async store(req, res) {
     const {
       id_usuario,
-      age,
-      gender,
-      height,
-      weight,
-      systolic,
-      diastolic,
-      cholesterol,
-      gluc,
-      smoke,
-      alco,
-      active,
-      score
+      id_livro,
+      nome_livro,
+      rating
+ 
     } = await Question.create({...req.body,id_usuario : req.userId});
     return res.json({
     id_usuario,
-      age,
-      gender,
-      height,
-      weight,
-      systolic,
-      diastolic,
-      cholesterol,
-      gluc,
-      smoke,
-      alco,
-      active,
-      score
+    id_livro,
+    nome_livro,
+    rating,
     });
   }
 

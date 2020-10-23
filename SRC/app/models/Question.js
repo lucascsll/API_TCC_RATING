@@ -5,18 +5,9 @@ class Question extends Model {
     super.init(
       {
         id_usuario: Sequelize.INTEGER,
-        age: Sequelize.INTEGER,
-        gender: Sequelize.INTEGER,
-        height: Sequelize.INTEGER,
-        weight: Sequelize.INTEGER,
-        systolic: Sequelize.INTEGER,
-        diastolic: Sequelize.INTEGER,
-        cholesterol: Sequelize.INTEGER,
-        gluc: Sequelize.INTEGER,
-        smoke: Sequelize.INTEGER,
-        alco: Sequelize.INTEGER,
-        active: Sequelize.INTEGER,
-        score: Sequelize.INTEGER,
+        id_livro: Sequelize.INTEGER,
+        nome_livro: Sequelize.STRING,
+        rating: Sequelize.INTEGER,
       },
       {
         sequelize,

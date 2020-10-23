@@ -7,22 +7,10 @@ module.exports = {
         autoIncrement: true,
         primaryKey: true,
       },
-      name: {
-        type: Sequelize.STRING,
-        allowNull: false,
-      },
       email: {
         type: Sequelize.STRING,
         allowNull: false,
         unique: true,
-      },
-      sexo: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-      },
-      idade: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
       },
       password_hash: {
         type: Sequelize.STRING,

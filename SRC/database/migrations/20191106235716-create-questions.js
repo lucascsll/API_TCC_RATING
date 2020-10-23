@@ -11,51 +11,15 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false,
       },
-      age: {
+      id_livro: {
         type: Sequelize.INTEGER,
         allowNull: false,
       },
-      gender: {
-        type: Sequelize.INTEGER,
+      nome_livro: {
+        type: Sequelize.STRING,
         allowNull: false,
       },
-      height: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-      },
-      weight: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-      },
-      systolic: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-      },
-      diastolic: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-      },
-      cholesterol: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-      },
-      gluc: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-      },
-      smoke: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-      },
-      alco: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-      },
-      active: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-      },
-      score: {
+      rating: {
         type: Sequelize.INTEGER,
         allowNull: false,
       },

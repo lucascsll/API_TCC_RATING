@@ -22,10 +22,6 @@ class SessionControler {
       user: {
         id,
         name,
-        email,
-        idade,
-        sexo,
-
       },
       token: jwt.sign({ id }, authConfig.secret, {
         expiresIn: authConfig.expiresIn,

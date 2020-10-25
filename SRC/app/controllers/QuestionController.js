@@ -1,5 +1,6 @@
 import Question from '../models/Question';
 import authConfig from '../../config/auth';
+import axios from 'axios'
 
 class QuestionController {
   async store(req, res) {
@@ -26,6 +27,18 @@ class QuestionController {
   async index(req ,res ){
     const quiz = await Question.findAll({ where:{id_usuario:req.userId} });
     return res.json({quiz});
+
+  } 
+
+  async buscarLivros(req, res){
+
+    const {pesquisarLivros}= req.body
+
+
+     await axios.get(`https://www.goodreads.com/book/auto_complete?format=json&q=${pesquisarLivros}`).then(resp=>{
+      return res.json(resp.data)
+      
+    })
 
   }
 }

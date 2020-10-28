@@ -41,5 +41,20 @@ class QuestionController {
     })
 
   }
+
+  async recomendar(req, res){
+
+    const {nome_livro} = req.body
+    var livrosRecomendados=[]
+    for (var prop in nome_livro) {
+     await axios.get(`https://www.goodreads.com/book/auto_complete?format=json&q=${nome_livro[prop]}`).then(resposta=>{
+        livrosRecomendados.push(resposta.data[0])
+      })
+    }
+
+    return res.json(livrosRecomendados)
+  
+  
+  }
 }
 export default new QuestionController();

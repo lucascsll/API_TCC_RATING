@@ -10,6 +10,7 @@ const routes = new Router();
 routes.post('/users', UserController.store);
 routes.post('/sessions', SessionController.store);
 routes.post('/buscarLivros', QuestionController.buscarLivros);
+routes.post('/recomendar', QuestionController.recomendar);
 routes.use(authMiddleware);
 routes.post('/quiz', QuestionController.store);
 routes.get('/getquiz', QuestionController.index);

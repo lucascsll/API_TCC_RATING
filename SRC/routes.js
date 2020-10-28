@@ -11,6 +11,7 @@ routes.post('/users', UserController.store);
 routes.post('/sessions', SessionController.store);
 routes.post('/buscarLivros', QuestionController.buscarLivros);
 routes.post('/recomendar', QuestionController.recomendar);
+routes.post('/resenha', QuestionController.resenha);
 routes.use(authMiddleware);
 routes.post('/quiz', QuestionController.store);
 routes.get('/getquiz', QuestionController.index);

@@ -1,6 +1,7 @@
 import Question from '../models/Question';
 import authConfig from '../../config/auth';
 import axios from 'axios'
+import convert from 'xml-js'
 
 class QuestionController {
   async store(req, res) {
@@ -53,8 +54,20 @@ class QuestionController {
     }
 
     return res.json(livrosRecomendados)
+
   
-  
+  }
+
+
+  async resenha(req, res){
+
+   const {id_livro} = req.body
+
+    axios.get(`https://www.goodreads.com/book/show/${id_livro}.xml?key=vpFCahMLJYm1aAujJqVgA`).then(resp=>{
+        
+      return res.end(convert.xml2json(resp.data, {compact: true, spaces: 4}))
+    })
+
   }
 }
 export default new QuestionController();

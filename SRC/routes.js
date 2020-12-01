@@ -12,9 +12,9 @@ routes.post('/sessions', SessionController.store);
 routes.post('/buscarLivros', QuestionController.buscarLivros);
 routes.post('/recomendar', QuestionController.recomendar);
 routes.post('/resenha', QuestionController.resenha);
+routes.get('/getquiz', QuestionController.index);
 routes.use(authMiddleware);
 routes.post('/quiz', QuestionController.store);
-routes.get('/getquiz', QuestionController.index);
 routes.put('/users', UserController.update);
 
 export default routes;

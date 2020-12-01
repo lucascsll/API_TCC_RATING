@@ -26,7 +26,7 @@ class QuestionController {
   }
 
   async index(req ,res ){
-    const quiz = await Question.findAll({ where:{id_usuario:req.userId} });
+    const quiz = await Question.findAll({ where:{id_usuario:req.body.userId} });
     return res.json({quiz});
 
   } 
